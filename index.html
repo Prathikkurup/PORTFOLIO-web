@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/772e130289.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header" style="background-image: url(images/wallpapersden.com_clean-night-sky-and-mountains-peak_1920x1080.jpg);
+    ">
+        <div class="container">
+            <nav>
+                <span class="logo">Prathik Kurup</span>
+              
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">feedback</a></li>
+
+                </ul>
+            </nav>
+            <div class="headertext">
+                <p>Web Developer</p>
+                <h1>Hey, I'm <span>Prathik</span> <br>from India</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="images/bike.jpg" id="biker" >
+                </div>
+                <div class="about-col2">
+                    <h1>About Me </h1>
+                    
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente reprehenderit molestias consequuntur cumque aliquid ratione laudantium. Vero fugiat odit, minus consectetur, ea voluptatibus mollitia, ipsam fugit nulla dolore labore? Tenetur!Lorem</p>
+               
+                    <div class="tabt">
+                        <p class="tab-links active" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents ac"id='Skills'>
+                        <ul>
+                            <li><span>Frontend dev</span><br>creating froendend of Website</li>
+                            <li><span>Musican</span><br>recreate music and entertain</li>
+                            <li><span>Traveller</span><br>just get up and leave for another journey </li>
+                        </ul>
+
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Tech intern</span><br>worked for 2 months at V2V edtech LLP as a part of their Tech team</li>
+                            <li><span>Musican</span><br>Performed at many gigs and enjoyed with alot of audience</li>
+                            <li><span>Application handling</span><br>Work for v2v and handled their own application</li>
+                        </ul>
+                        
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>B tech </span><br>Pursuing my <span>Second year </span>of computer science engineering</li>
+                            <li><span>HSC</span><br>Completed it with an score of<span> 80.50%<span></li>
+                            <li><span>SSC</span><br>Completed it with an score of<span> 90.60%<span></span></li>
+                        </ul>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contactleft">
+                            <h1 class="subtitle">Contact Me </h1>
+                            <p><i class="fa-solid fa-envelope"></i>prathik.kurup@gmail.com</p>
+                            <p><i class="fa-brands fa-square-whatsapp"></i>9136754942</p>
+                            <div class="socialicon">
+                                <a href="https://instagram.com/prathik_kurup_?igshid=OGQ5ZDc2ODk2ZA=="><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/prathik-kurup-a40665249"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/Prathikkurup"><i class="fa-brands fa-square-github"></i></a>
+                                
+                            </div>
+                         
+                </div>
+                <div class="contactright">
+                        <form >
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email"  name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                             <button type="submit" class="button-44 ">Submit</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links")
+        var tabcontents=document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("ac");
+            }  
+            event.currentTarget.classList.add("active") 
+            document.getElementById(tabname).classList.add("ac")  
+        }
+    </script>
+</body>
+</html>
